@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   webapp:
-    image: ror:1.2
+    image: ror:1.0
     
     ports:
       - "3000:3000"
@@ -11,6 +11,7 @@ services:
       - ".:/app" 
 
     command: cd app_padrao
+    command: bundle exec rails new .
     command: bundle exec rails s -p "3000" -b "0.0.0.0"
   
     networks:
